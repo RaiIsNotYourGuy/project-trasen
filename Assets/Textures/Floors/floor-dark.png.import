@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/human.png-96c87dc6aeae46b15046f67a2a4d64ef.stex"
+path="res://.import/floor-dark.png-52e975208dea748c55289059ea7195df.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objects & Extras/Mobs/human.png"
-dest_files=[ "res://.import/human.png-96c87dc6aeae46b15046f67a2a4d64ef.stex" ]
+source_file="res://Assets/Textures/Floors/floor-dark.png"
+dest_files=[ "res://.import/floor-dark.png-52e975208dea748c55289059ea7195df.stex" ]
 
 [params]
 

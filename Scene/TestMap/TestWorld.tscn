@@ -1,13 +1,19 @@
 [gd_scene load_steps=71 format=2]
 
-[ext_resource path="res://Assets/floor-dark.png" type="Texture" id=1]
-[ext_resource path="res://Scene/Inherits/generator.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scene/Inherits/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Textures/Floors/floor-dark.png" type="Texture" id=1]
+[ext_resource path="res://Scene/Inherits/Generator/generator.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scene/Inherits/Player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scene/Inherits/Lighting/lighting_tube_north.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scene/Inherits/UI.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Assets/Walls/Survival Pod Wall.png" type="Texture" id=6]
-[ext_resource path="res://Assets/Walls/Indoor Wall 1 Tileset.png" type="Texture" id=7]
+[ext_resource path="res://Scene/Inherits/UI/UI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Textures/Walls/Survival Pod Wall.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Textures/Walls/Indoor Wall 1 Tileset.png" type="Texture" id=7]
 [ext_resource path="res://Scene/Inherits/Lighting/lighting_tube_south.tscn" type="PackedScene" id=8]
+
+
+
+
+
+
 
 [sub_resource type="OccluderPolygon2D" id=1]
 polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )

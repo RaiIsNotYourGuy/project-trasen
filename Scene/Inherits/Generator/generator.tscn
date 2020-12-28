@@ -5,7 +5,8 @@
 [ext_resource path="res://Assets/Objects & Extras/Generator/gen-breaker-off.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Objects & Extras/Generator/gen-breaker-on.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Objects & Extras/Generator/gen-screen-off.png" type="Texture" id=5]
-[ext_resource path="res://Scene/Inherits/generator.gd" type="Script" id=6]
+[ext_resource path="res://Scene/Inherits/Generator/generator.gd" type="Script" id=6]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 16.8421 )

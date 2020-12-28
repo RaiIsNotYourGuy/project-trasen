@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/midnight.png-faa6b567f69fd6820278643edb72b95a.stex"
+path="res://.import/midnight.png-2350bcb5f7151503d0ae6cb80e347b7a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/midnight.png"
-dest_files=[ "res://.import/midnight.png-faa6b567f69fd6820278643edb72b95a.stex" ]
+source_file="res://Assets/Textures/UI/midnight.png"
+dest_files=[ "res://.import/midnight.png-2350bcb5f7151503d0ae6cb80e347b7a.stex" ]
 
 [params]
 

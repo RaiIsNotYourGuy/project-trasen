@@ -1,6 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Assets/midnight.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Textures/UI/midnight.png" type="Texture" id=1]
+
 
 [sub_resource type="TileSet" id=1]
 0/name = "midnight.png 0"

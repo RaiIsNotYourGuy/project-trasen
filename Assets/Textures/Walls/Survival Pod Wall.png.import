@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Indoor Wall 1 Tileset.png-14e7bc8af3cb54dbc1986c712910d872.stex"
+path="res://.import/Survival Pod Wall.png-765ed8a1c6e888789e5ffd0b3cef0449.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Walls/Indoor Wall 1 Tileset.png"
-dest_files=[ "res://.import/Indoor Wall 1 Tileset.png-14e7bc8af3cb54dbc1986c712910d872.stex" ]
+source_file="res://Assets/Textures/Walls/Survival Pod Wall.png"
+dest_files=[ "res://.import/Survival Pod Wall.png-765ed8a1c6e888789e5ffd0b3cef0449.stex" ]
 
 [params]
 

@@ -1,8 +1,10 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Assets/Objects & Extras/Mobs/lighting_tube.png" type="Texture" id=1]
-[ext_resource path="res://Assets/Objects & Extras/tube_lighting.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Objects & Extras/tube.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Textures/Lights/lighting_tube.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Textures/Lights/tube_lighting.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Textures/Lights/tube.png" type="Texture" id=3]
+
+
 
 [node name="Sprite" type="Sprite"]
 texture = ExtResource( 3 )
