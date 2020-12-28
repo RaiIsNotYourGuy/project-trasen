@@ -1,2 +1,2 @@
 # project-trasen
-Game indev
+Game in development
