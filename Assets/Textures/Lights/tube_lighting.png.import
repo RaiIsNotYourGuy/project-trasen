@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Low-TownA5.png-573f2e5cbd8b2ad59fae7cb3bef2dac8.stex"
+path="res://.import/tube_lighting.png-a38e0b68adce578f5d535857bec68c1e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Walls/LowTown/Low-TownA5.png"
-dest_files=[ "res://.import/Low-TownA5.png-573f2e5cbd8b2ad59fae7cb3bef2dac8.stex" ]
+source_file="res://Assets/Textures/Lights/tube_lighting.png"
+dest_files=[ "res://.import/tube_lighting.png-a38e0b68adce578f5d535857bec68c1e.stex" ]
 
 [params]
 
