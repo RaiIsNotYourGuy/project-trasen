@@ -686,6 +686,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 0/z_index = 0
 
 [node name="Node2D" type="Node2D"]
+modulate = Color( 0.0196078, 0.0196078, 0.0196078, 1 )
 
 [node name="YSort" type="YSort" parent="."]
 position = Vector2( -96, -80 )
@@ -718,21 +719,26 @@ z_index = 2
 [node name="North" type="Node" parent="YSort/Lighting/Tubes"]
 
 [node name="Sprite" parent="YSort/Lighting/Tubes/North" instance=ExtResource( 4 )]
+modulate = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
 position = Vector2( 272, 16 )
 z_index = 0
 
 [node name="Sprite2" parent="YSort/Lighting/Tubes/North" instance=ExtResource( 4 )]
+modulate = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
 position = Vector2( 32, 16 )
 z_index = 0
 
 [node name="Sprite3" parent="YSort/Lighting/Tubes/North" instance=ExtResource( 4 )]
+modulate = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
 position = Vector2( 400, 48 )
 z_index = 0
 
 [node name="South" type="Node" parent="YSort/Lighting/Tubes"]
 
 [node name="Sprite" parent="YSort/Lighting/Tubes/South" instance=ExtResource( 8 )]
+modulate = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
 position = Vector2( 32, 112 )
+z_index = 2
 
 [node name="Floor" type="TileMap" parent="."]
 z_index = -1
@@ -758,10 +764,8 @@ margin_right = -640.0
 rect_scale = Vector2( 2, 2 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="CanvasLayer"]
-modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
 light_mask = -2147483648
-color = Color( 0.694118, 0.694118, 0.694118, 1 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 

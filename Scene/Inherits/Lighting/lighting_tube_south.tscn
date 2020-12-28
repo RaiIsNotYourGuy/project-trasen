@@ -5,6 +5,7 @@
 [ext_resource path="res://Assets/Textures/Lights/tube.png" type="Texture" id=3]
 
 [node name="Sprite" type="Sprite"]
+z_index = 1
 texture = ExtResource( 3 )
 offset = Vector2( 0, 2 )
 
@@ -15,5 +16,5 @@ texture = ExtResource( 2 )
 position = Vector2( 0, 11 )
 rotation = 3.14159
 texture = ExtResource( 1 )
-texture_scale = 1.5
-energy = 0.75
+texture_scale = 3.0
+energy = 6.95
