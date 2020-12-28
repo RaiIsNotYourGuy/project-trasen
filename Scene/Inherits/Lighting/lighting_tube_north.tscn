@@ -4,8 +4,6 @@
 [ext_resource path="res://Assets/Textures/Lights/tube_lighting.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Textures/Lights/tube.png" type="Texture" id=3]
 
-
-
 [node name="Sprite" type="Sprite"]
 rotation = -3.14159
 z_index = -1
@@ -22,3 +20,4 @@ rotation = 3.14159
 texture = ExtResource( 1 )
 offset = Vector2( 0, -2.25 )
 texture_scale = 1.5
+energy = 0.75
