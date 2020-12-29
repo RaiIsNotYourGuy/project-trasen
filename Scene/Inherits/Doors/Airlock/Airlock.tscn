@@ -1,0 +1,123 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Assets/Textures/Doors/Airlock/o_opening.png" type="Texture" id=1]
+[ext_resource path="res://Scene/Inherits/Doors/Airlock/Door.gd" type="Script" id=2]
+
+[sub_resource type="Animation" id=3]
+resource_name = "CloseUp"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "ClosingUp"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 7, 6, 5, 4, 3, 2, 1, 0 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "OpenUp"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 7 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "OpeningUp"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=5]
+animation = "CloseUp"
+
+[sub_resource type="AnimationNodeAnimation" id=6]
+animation = "ClosingUp"
+
+[sub_resource type="AnimationNodeAnimation" id=7]
+animation = "OpenUp"
+
+[sub_resource type="AnimationNodeAnimation" id=8]
+animation = "OpeningUp"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=9]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=10]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=11]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=12]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id=13]
+states/CloseUp/node = SubResource( 5 )
+states/CloseUp/position = Vector2( 238, 155 )
+states/ClosingUp/node = SubResource( 6 )
+states/ClosingUp/position = Vector2( 477, 212 )
+states/OpenUp/node = SubResource( 7 )
+states/OpenUp/position = Vector2( 720, 155 )
+states/OpeningUp/node = SubResource( 8 )
+states/OpeningUp/position = Vector2( 477, 102 )
+transitions = [ "CloseUp", "OpeningUp", SubResource( 9 ), "OpeningUp", "OpenUp", SubResource( 10 ), "OpenUp", "ClosingUp", SubResource( 11 ), "ClosingUp", "CloseUp", SubResource( 12 ) ]
+graph_offset = Vector2( -174, 43 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=14]
+
+[node name="Sprite" type="Sprite"]
+texture = ExtResource( 1 )
+vframes = 4
+hframes = 8
+frame = 7
+script = ExtResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/CloseUp = SubResource( 3 )
+anims/ClosingUp = SubResource( 1 )
+anims/OpenUp = SubResource( 4 )
+anims/OpeningUp = SubResource( 2 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 13 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 14 )
