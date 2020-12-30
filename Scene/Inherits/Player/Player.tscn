@@ -1,8 +1,230 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Assets/Objects & Extras/Mobs/Humanoid/human.png" type="Texture" id=1]
 [ext_resource path="res://Scene/Inherits/Player/Player.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Textures/Lights/lighting.png" type="Texture" id=3]
+
+[sub_resource type="AnimationNodeAnimation" id=3]
+animation = "WalkLeft"
+
+[sub_resource type="AnimationNodeAnimation" id=4]
+animation = "WalkDown"
+
+[sub_resource type="AnimationNodeAnimation" id=5]
+animation = "WalkRight"
+
+[sub_resource type="AnimationNodeAnimation" id=6]
+animation = "WalkUp"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=7]
+blend_point_0/node = SubResource( 3 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 4 )
+blend_point_1/pos = Vector2( 0, 1.1 )
+blend_point_2/node = SubResource( 5 )
+blend_point_2/pos = Vector2( 1, 0 )
+blend_point_3/node = SubResource( 6 )
+blend_point_3/pos = Vector2( 0, -1.1 )
+min_space = Vector2( -1, -1.1 )
+max_space = Vector2( 1, 1.1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachine" id=8]
+states/Walk/node = SubResource( 7 )
+states/Walk/position = Vector2( 458, 138 )
+start_node = "Walk"
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=9]
+
+[sub_resource type="Animation" id=10]
+resource_name = "LeftSideDown"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 9 ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "LeftSideLeft"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 10 ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "LeftSideRight"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 11 ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "LeftSideUp"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 8 ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "RightSideDown"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 5 ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "RightSideLeft"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 7 ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "RightSideRight"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 6 ]
+}
+
+[sub_resource type="Animation" id=17]
+resource_name = "RightSideUp"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 4 ]
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "WalkDown"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "WalkLeft"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 3 ]
+}
+
+[sub_resource type="Animation" id=20]
+resource_name = "WalkRight"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+
+[sub_resource type="Animation" id=21]
+resource_name = "WalkUp"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -15,6 +237,8 @@ script = ExtResource( 2 )
 modulate = Color( 0.666667, 0.666667, 0.666667, 1 )
 position = Vector2( 0, -16 )
 texture = ExtResource( 1 )
+vframes = 4
+hframes = 4
 
 [node name="Camera2D" type="Camera2D" parent="Sprite"]
 scale = Vector2( 0.4, 0.4 )
@@ -42,6 +266,27 @@ color = Color( 0.533333, 0.678431, 0.756863, 1 )
 energy = 2.0
 range_layer_max = 10
 shadow_enabled = true
+
+[node name="AnimationTree" type="AnimationTree" parent="Sprite"]
+tree_root = SubResource( 8 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 9 )
+parameters/Walk/blend_position = Vector2( 0, 0.1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]
+anims/LeftSideDown = SubResource( 10 )
+anims/LeftSideLeft = SubResource( 11 )
+anims/LeftSideRight = SubResource( 12 )
+anims/LeftSideUp = SubResource( 13 )
+anims/RightSideDown = SubResource( 14 )
+anims/RightSideLeft = SubResource( 15 )
+anims/RightSideRight = SubResource( 16 )
+anims/RightSideUp = SubResource( 17 )
+anims/WalkDown = SubResource( 18 )
+anims/WalkLeft = SubResource( 19 )
+anims/WalkRight = SubResource( 20 )
+anims/WalkUp = SubResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.5, -2 )

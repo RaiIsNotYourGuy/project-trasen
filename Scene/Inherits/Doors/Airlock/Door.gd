@@ -9,3 +9,4 @@ var input = doorclosed()
 func doorclosed():
 	state_machine.start('CloseUp')
 	
+ 

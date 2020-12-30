@@ -107,7 +107,6 @@ graph_offset = Vector2( -174, 43 )
 texture = ExtResource( 1 )
 vframes = 4
 hframes = 8
-frame = 7
 script = ExtResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
