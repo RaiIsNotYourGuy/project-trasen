@@ -239,6 +239,7 @@ position = Vector2( 0, -16 )
 texture = ExtResource( 1 )
 vframes = 4
 hframes = 4
+frame = 11
 
 [node name="Camera2D" type="Camera2D" parent="Sprite"]
 scale = Vector2( 0.4, 0.4 )

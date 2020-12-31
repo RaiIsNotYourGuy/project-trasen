@@ -1,9 +1,9 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Assets/Textures/Doors/Airlock/o_opening.png" type="Texture" id=1]
 [ext_resource path="res://Scene/Inherits/Doors/Airlock/Door.gd" type="Script" id=2]
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=1]
 resource_name = "CloseUp"
 length = 0.1
 tracks/0/type = "value"
@@ -18,9 +18,32 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 0 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("StaticBody2D/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 8, 4 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("StaticBody2D/CollisionShape2D2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -8, 4 ) ]
+}
 
-[sub_resource type="Animation" id=1]
-resource_name = "ClosingUp"
+[sub_resource type="Animation" id=2]
 length = 0.8
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:frame")
@@ -34,8 +57,32 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 7, 6, 5, 4, 3, 2, 1, 0 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("StaticBody2D/CollisionShape2D2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( -19, 4 ), Vector2( -15, 4 ), Vector2( -11, 4 ), Vector2( -8, 4 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("StaticBody2D/CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 19, 4 ), Vector2( 15, 4 ), Vector2( 11, 4 ), Vector2( 8, 4 ) ]
+}
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 resource_name = "OpenUp"
 length = 0.1
 tracks/0/type = "value"
@@ -50,9 +97,32 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 7 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("StaticBody2D/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 19, 4 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("StaticBody2D/CollisionShape2D2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -19, 4 ) ]
+}
 
-[sub_resource type="Animation" id=2]
-resource_name = "OpeningUp"
+[sub_resource type="Animation" id=4]
 length = 0.8
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:frame")
@@ -65,6 +135,30 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("StaticBody2D/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 8, 4 ), Vector2( 11, 4 ), Vector2( 15, 4 ), Vector2( 19, 4 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("StaticBody2D/CollisionShape2D2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( -8, 4 ), Vector2( -11, 4 ), Vector2( -15, 4 ), Vector2( -19, 4 ) ]
 }
 
 [sub_resource type="AnimationNodeAnimation" id=5]
@@ -95,13 +189,17 @@ states/CloseUp/position = Vector2( 238, 155 )
 states/ClosingUp/node = SubResource( 6 )
 states/ClosingUp/position = Vector2( 477, 212 )
 states/OpenUp/node = SubResource( 7 )
-states/OpenUp/position = Vector2( 720, 155 )
+states/OpenUp/position = Vector2( 721, 155 )
 states/OpeningUp/node = SubResource( 8 )
 states/OpeningUp/position = Vector2( 477, 102 )
 transitions = [ "CloseUp", "OpeningUp", SubResource( 9 ), "OpeningUp", "OpenUp", SubResource( 10 ), "OpenUp", "ClosingUp", SubResource( 11 ), "ClosingUp", "CloseUp", SubResource( 12 ) ]
+start_node = "CloseUp"
 graph_offset = Vector2( -174, 43 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=14]
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 8, 16 )
 
 [node name="Sprite" type="Sprite"]
 texture = ExtResource( 1 )
@@ -110,13 +208,25 @@ hframes = 8
 script = ExtResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/CloseUp = SubResource( 3 )
-anims/ClosingUp = SubResource( 1 )
-anims/OpenUp = SubResource( 4 )
-anims/OpeningUp = SubResource( 2 )
+anims/CloseUp = SubResource( 1 )
+anims/ClosingUp = SubResource( 2 )
+anims/OpenUp = SubResource( 3 )
+anims/OpeningUp = SubResource( 4 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 13 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 14 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 8, 4 )
+scale = Vector2( 1, 0.75 )
+shape = SubResource( 15 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -8, 4 )
+scale = Vector2( 1, 0.75 )
+shape = SubResource( 15 )

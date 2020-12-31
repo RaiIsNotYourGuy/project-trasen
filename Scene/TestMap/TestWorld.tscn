@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=2]
+[gd_scene load_steps=76 format=2]
 
 [ext_resource path="res://Assets/Textures/Floors/floor-dark.png" type="Texture" id=1]
 [ext_resource path="res://Scene/Inherits/Generator/generator.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Scene/Inherits/Lighting/lighting_tube_south.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Assets/Textures/Floors/plating.png" type="Texture" id=9]
 [ext_resource path="res://Assets/Textures/Power/cable.png" type="Texture" id=10]
+[ext_resource path="res://Scene/Inherits/Doors/Airlock/Airlock.tscn" type="PackedScene" id=11]
 
 [sub_resource type="OccluderPolygon2D" id=1]
 polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -738,9 +739,9 @@ z_index = 2
 position = Vector2( 160, 128 )
 z_index = 2
 
-[node name="Lighting" type="Node" parent="YSort"]
+[node name="Lighting" type="Node2D" parent="YSort"]
 
-[node name="Tubes" type="Node" parent="YSort/Lighting"]
+[node name="Tubes" type="Node2D" parent="YSort/Lighting"]
 
 [node name="North" type="Node" parent="YSort/Lighting/Tubes"]
 
@@ -766,7 +767,15 @@ modulate = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
 position = Vector2( 32, 112 )
 z_index = 2
 
+[node name="Doors" type="YSort" parent="YSort"]
+z_index = 2
+
+[node name="Sprite" parent="YSort/Doors" instance=ExtResource( 11 )]
+position = Vector2( 304, 224 )
+z_index = 2
+
 [node name="Floor" type="TileMap" parent="."]
+visible = false
 z_index = -1
 tile_set = SubResource( 62 )
 cell_size = Vector2( 32, 32 )
